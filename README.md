@@ -1,5 +1,5 @@
 # 1joon-numbers
-![chrome-capture](https://user-images.githubusercontent.com/35263766/115259543-f3937800-a16c-11eb-92f3-6da9de2e1cb3.gif)
+![chrome-capture](https://user-images.githubusercontent.com/35263766/115259895-3fdeb800-a16d-11eb-8214-d3d05a8789a3.gif)
   
 A number puzzle game designed to help my child learn numbers quickly.  
 It has the following features.
