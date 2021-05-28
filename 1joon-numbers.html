@@ -423,7 +423,9 @@ let size = getParam('size') || 3,
     count = getParam('count') || 1,
     mode = getParam('mode') || 'basic',
     showTime = getParam('show-time') || 1500,
-    font = getParam('font') || 'Neucha';
+    font = getParam('font') || 'Neucha',
+    scroll = getParam('scroll') || true,
+    started = false;
 
 let hideQuestionTimeout;
 
@@ -484,6 +486,14 @@ const setFontAttribute = function() {
     addFontAttribute(document.querySelector('.question-area .question-number'));
 
 }();
+
+/*
+const setScrollingClass = function() {
+    if (scroll === 'false') {
+        document.querySelector('body').classList.add('stop-scrolling');
+    }
+}();
+*/
 
 const question = function(pool) {
     const randomPool = pool;
