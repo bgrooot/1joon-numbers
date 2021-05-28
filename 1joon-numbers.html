@@ -332,7 +332,7 @@ const clickNumber = function(event) {
           number = target.innerText,
           colorRandomPool = colorRandomPoolMap.getColorRandomPool(target);
 
-    if (number != question.get()) {
+    if (number != question.get() || (mode === 'advanced' && !started)) {
         return;
     }
 
@@ -357,7 +357,7 @@ const clickNumber = function(event) {
 
 const playNumberAudio = function(event) {
     const target = event.target;
-    if ((mode !== 'advanced' || (mode === 'advanced' && target.innerText !== elem.questionNumber().innerText)) && !target.classList.contains('clicked')) {
+    if ((mode !== 'advanced' || !started || (mode === 'advanced' && target.innerText !== elem.questionNumber().innerText)) && !target.classList.contains('clicked')) {
         playAudio('number-' + target.innerText);
     } 
 };
@@ -456,6 +456,7 @@ const initAdvancedMode = function() {
     }
 
     elem.startButton().addEventListener('click', showQuestion);
+    elem.startButton().addEventListener('click', function() { started = true });
     elem.playButton().addEventListener('click', playQuestionNumberAudio);
 
 }();
